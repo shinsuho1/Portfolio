@@ -1,0 +1,124 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .title{
+        position: absolute;
+        font-family: "Montserrat";
+        width: 1180px;
+        margin: 0 auto;
+        left: -50%; //50%
+        top: 50%;
+        transform: translate(-50%,-70%);
+        z-index: 1;
+        transition: 1s;
+
+            h1{
+                font-size: 50px;
+                margin: 0 auto;
+                
+                
+            }
+            h2{
+                font-size: 20px;
+                font-weight: 500;
+                margin: 0 auto;
+            }
+            p{
+                margin-bottom: 40px;
+            }
+            .btn{
+                padding: 10px 20px;
+                background: #6384e1;
+                color: #fff;
+                border-radius: 5px;
+                font-size: 15px;
+                opacity: 1;
+            }
+            .icons{
+                width: 1180px;
+                height: 40px;
+                padding-left: 10px;
+                opacity: 0;
+                transition: 1s 1s;
+                a{
+                    width: 30px;
+                    height: 30px;
+                    float: left;
+                    margin-right: 30px;
+                    i{
+                        font-size: 30px;
+                        color: #6a88d8;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                p{
+                    position: absolute;
+                    opacity: 0;
+                    top: 250px;
+                    padding: 5px;
+                    border: 1px solid #000;
+                    border-radius: 15px;
+                }
+                .ms{
+                    left: 20px;
+                }
+                .adobe{
+                    left: 80px;
+                }
+                .node{
+                    left: 145px;
+                }
+            }
+    }
+    .square{
+        position: absolute;
+        width: 800px;
+        height: 1100px;
+        background: linear-gradient( to bottom,#6384e1,#5175d8, #6384e1 );
+        transform: rotate(-45deg);
+        border-radius: 15px;
+        top: -200px;
+        right: -100%;
+        opacity: 0;
+        transition: all 1s;
+    }
+    &.on{
+        .title{
+            left: 50%;
+            .icons{
+                margin-top: 30px;
+                opacity: 1;
+            }
+        }
+        .square{
+            opacity: 1;
+            right: -370px;
+        }
+    }
+    .pop{
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		top: 0; left: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		overflow: hidden;
+		padding: 5vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.btnClose{
+			position: absolute;
+			top: 50px;
+			right: 50px;
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+}

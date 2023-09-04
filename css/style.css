@@ -1,0 +1,1041 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Raleway:wght@100&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+li, ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 0px;
+  box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: 1s;
+  z-index: 3;
+}
+header .inner {
+  width: 1180px;
+  height: 0px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  bottom: 20px;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 1s;
+}
+header .inner h1 a i {
+  font-size: 50px;
+  color: #6a88d8;
+}
+header .inner .menuWeb {
+  display: flex;
+}
+header .inner .menuWeb #gnb li {
+  float: left;
+}
+header .inner .menuWeb #gnb li a {
+  display: block;
+  padding: 14px 40px;
+  font: bold 16px/1 "arial";
+  letter-spacing: 0px;
+  color: #6a88d8;
+}
+header .inner .menuWeb #gnb li:hover a::after {
+  content: "";
+  display: block;
+  box-shadow: 0 0 16px 5px rgba(40, 44, 55, 0.1);
+}
+header .inner .menuWeb #toggleBtn {
+  margin-left: 14px;
+}
+header .inner .menuWeb #toggleBtn .toggleSwitch {
+  width: 140px;
+  height: 40px;
+  display: block;
+  position: relative;
+  border-radius: 30px;
+  background-color: #fff;
+  border: 1px solid #6a88d8;
+  box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+header .inner .menuWeb #toggleBtn .toggleSwitch .toggleButton {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  border-radius: 100px;
+  background: #6a88d8;
+  transition: all 0.2s ease-in;
+  font: bold 18px/30px "Montserrats";
+  color: #fff;
+  text-align: center;
+}
+header .inner .menuWeb #toggleBtn #toggle:checked ~ .toggleSwitch {
+  background: #6a88d8;
+}
+header .inner .menuWeb #toggleBtn #toggle:checked ~ .toggleSwitch .toggleButton {
+  left: calc(100% - 64px);
+  background: #fff;
+}
+header.on {
+  height: 80px;
+  opacity: 1;
+}
+header.on .inner {
+  opacity: 1;
+  bottom: -20px;
+}
+
+#header_sub {
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transition: 1s;
+  z-index: 3;
+}
+#header_sub .inner {
+  width: 1180px;
+  height: -20px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  bottom: -20px;
+  justify-content: space-between;
+  opacity: 1;
+  transition: 1s;
+}
+#header_sub .inner h1 a i {
+  font-size: 50px;
+  color: #6a88d8;
+}
+#header_sub .inner .menuWeb {
+  display: flex;
+}
+#header_sub .inner .menuWeb #gnb li {
+  float: left;
+}
+#header_sub .inner .menuWeb #gnb li a {
+  display: block;
+  padding: 14px 40px;
+  font: bold 16px/1 "arial";
+  letter-spacing: 0px;
+  color: #6a88d8;
+}
+#header_sub .inner .menuWeb #gnb li:hover a::after {
+  content: "";
+  display: block;
+  box-shadow: 0 0 16px 5px rgba(40, 44, 55, 0.1);
+}
+#header_sub .inner .menuWeb #toggleBtn {
+  margin-left: 14px;
+}
+#header_sub .inner .menuWeb #toggleBtn .toggleSwitch {
+  width: 140px;
+  height: 40px;
+  display: block;
+  position: relative;
+  border-radius: 30px;
+  background-color: #fff;
+  border: 1px solid #6a88d8;
+  box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+#header_sub .inner .menuWeb #toggleBtn .toggleSwitch .toggleButton {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  border-radius: 100px;
+  background: #6a88d8;
+  transition: all 0.2s ease-in;
+  font: bold 18px/30px "Montserrats";
+  color: #fff;
+  text-align: center;
+}
+#header_sub .inner .menuWeb #toggleBtn #toggle:checked ~ .toggleSwitch {
+  background: #6a88d8;
+}
+#header_sub .inner .menuWeb #toggleBtn #toggle:checked ~ .toggleSwitch .toggleButton {
+  left: calc(100% - 64px);
+  background: #fff;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.main .title {
+  position: absolute;
+  font-family: "Montserrat";
+  width: 1180px;
+  margin: 0 auto;
+  left: -50%;
+  top: 50%;
+  transform: translate(-50%, -70%);
+  z-index: 1;
+  transition: 1s;
+}
+.main .title h1 {
+  font-size: 50px;
+  margin: 0 auto;
+}
+.main .title h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 auto;
+}
+.main .title p {
+  margin-bottom: 40px;
+}
+.main .title .btn {
+  padding: 10px 20px;
+  background: #6384e1;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  opacity: 1;
+}
+.main .title .icons {
+  width: 1180px;
+  height: 40px;
+  padding-left: 10px;
+  opacity: 0;
+  transition: 1s 1s;
+}
+.main .title .icons a {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-right: 30px;
+}
+.main .title .icons a i {
+  font-size: 30px;
+  color: #6a88d8;
+}
+.main .title .icons a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.main .title .icons p {
+  position: absolute;
+  opacity: 0;
+  top: 250px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+.main .title .icons .ms {
+  left: 20px;
+}
+.main .title .icons .adobe {
+  left: 80px;
+}
+.main .title .icons .node {
+  left: 145px;
+}
+.main .square {
+  position: absolute;
+  width: 800px;
+  height: 1100px;
+  background: linear-gradient(to bottom, #6384e1, #5175d8, #6384e1);
+  transform: rotate(-45deg);
+  border-radius: 15px;
+  top: -200px;
+  right: -100%;
+  opacity: 0;
+  transition: all 1s;
+}
+.main.on .title {
+  left: 50%;
+}
+.main.on .title .icons {
+  margin-top: 30px;
+  opacity: 1;
+}
+.main.on .square {
+  opacity: 1;
+  right: -370px;
+}
+.main .pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .pop .btnClose {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.progream {
+  width: 100%;
+  height: 100vh;
+  padding: 150px 0px;
+  display: flex;
+  justify-content: center;
+}
+.progream .inner {
+  width: 1180px;
+  height: 550px;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+  opacity: 0;
+  bottom: -100px;
+  transition: 1s;
+}
+.progream .inner div.title {
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  overflow: hidden;
+}
+.progream .inner div.title #title {
+  width: 600%;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.progream .inner div.title #title li {
+  width: 400px;
+  height: 100%;
+  float: left;
+}
+.progream .inner div.title #title li h2 {
+  font: bold 30px "Pretendard-Regular";
+  color: #888;
+  margin-bottom: 10px;
+}
+.progream .inner div.title #title li h1 {
+  font: bold 40px "Pretendard-Regular";
+}
+.progream .inner div.title #title li.excel h1 {
+  color: #217345;
+}
+.progream .inner div.title #title li.powerpoint h1 {
+  color: #d24726;
+}
+.progream .inner div.title #title li.word h1 {
+  color: #185abd;
+}
+.progream .inner div.title #title li.access h1 {
+  color: #a4373a;
+}
+.progream .inner div.title #title li.teams h1 {
+  color: #444bb1;
+}
+.progream .inner div.title #title li.onedrive h1 {
+  color: #0678d3;
+}
+.progream .inner #slider {
+  width: 600%;
+  height: 100%;
+  float: left;
+  position: absolute;
+  top: 120px;
+}
+.progream .inner #slider li {
+  width: 1180px;
+  height: 100%;
+  float: left;
+}
+.progream .inner #slider li .pic {
+  width: 100%;
+  height: 100%;
+}
+.progream .inner #slider li .pic article {
+  width: 580px;
+  height: 400px;
+  float: left;
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 40px;
+}
+.progream .inner #slider li .pic article h3 {
+  color: black;
+  font: bold 30px/1 "Pretendard-Regular";
+  margin-bottom: 13px;
+}
+.progream .inner #slider li .pic article p {
+  color: black;
+  font: 18px/1.2 "Pretendard-Regular";
+}
+.progream .inner #slider li .pic article p:nth-of-type(1) {
+  margin-bottom: 30px;
+}
+.progream .inner #slider li .pic article .btn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.progream .inner #slider li .pic article .btn button {
+  background-color: #fff;
+  border-radius: 50px;
+  width: 200px;
+  height: 35px;
+  cursor: pointer;
+  font: 15px/35px "Pretendard-Regular";
+}
+.progream .inner #slider li .pic article .btn button:last-child {
+  color: #fff;
+}
+.progream .inner #slider li .pic article:last-child {
+  margin-right: 0px;
+}
+.progream .inner #slider li .pic article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.progream .inner #slider li:last-child {
+  margin-right: 0px;
+}
+.progream .inner #slider li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.progream .inner #slider li .excel article button {
+  border: 1px solid #217345;
+}
+.progream .inner #slider li .excel article button:nth-of-type(2) {
+  background-color: #217345;
+}
+.progream .inner #slider li .word article button {
+  border: 1px solid #185abd;
+}
+.progream .inner #slider li .word article button:last-child {
+  background-color: #185abd;
+}
+.progream .inner #slider li .powerpoint article button {
+  border: 1px solid #d24726;
+}
+.progream .inner #slider li .powerpoint article button:last-child {
+  background-color: #d24726;
+}
+.progream .inner #slider li .access article button {
+  border: 1px solid #a4373a;
+}
+.progream .inner #slider li .access article button:last-child {
+  background-color: #a4373a;
+}
+.progream .inner #slider li .teams article button {
+  border: 1px solid #444bb1;
+}
+.progream .inner #slider li .teams article button:last-child {
+  background-color: #444bb1;
+}
+.progream .inner #slider li .onedrive article button {
+  margin-top: 20px;
+  border: 1px solid #0678d3;
+}
+.progream .inner #slider li .onedrive article button:last-child {
+  background-color: #0678d3;
+}
+.progream .inner .prev {
+  position: absolute;
+  top: 57.5%;
+  left: 0px;
+  color: #000;
+  font: 20px "arial";
+}
+.progream .inner .next {
+  position: absolute;
+  top: 57.5%;
+  right: 0px;
+  color: #000;
+  font: 20px "arial";
+}
+.progream.on .inner {
+  opacity: 1;
+  bottom: 0px;
+}
+
+section.data_page {
+  width: 100%;
+  height: 100%;
+  padding: 150px 0;
+}
+section.data_page .inner {
+  position: relative;
+  width: 1180px;
+  height: 900px;
+  margin: 0 auto;
+  display: flex;
+}
+section.data_page .inner .left_side {
+  width: 560px;
+  height: 560px;
+  float: left;
+  margin-right: 20px;
+}
+section.data_page .inner .left_side .main_text {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 40px;
+}
+section.data_page .inner .left_side .main_text h1 {
+  margin: 50px;
+  margin-top: 70px;
+  font: bold 32px/1.3 "airal";
+}
+section.data_page .inner .left_side .main_text p {
+  margin: 50px;
+}
+section.data_page .inner .left_side .sub_text {
+  width: 100%;
+  height: 200px;
+}
+section.data_page .inner .left_side .sub_text .table {
+  margin-top: 20px;
+}
+section.data_page .inner .left_side .sub_text .table p {
+  margin-top: 10px;
+  font: bold 18px/1 "arial";
+  display: flex;
+  justify-content: space-between;
+  margin-right: 40px;
+  margin-left: 50px;
+}
+section.data_page .inner .left_side .sub_text .table .data {
+  width: 470px;
+  height: 10px;
+  background-color: #e4e4e4;
+  opacity: 0.6;
+}
+section.data_page .inner .left_side .sub_text .table .data span {
+  display: block;
+  width: 0%;
+  height: 10px;
+  background-color: rgb(241, 170, 38);
+  transition: 3s;
+}
+section.data_page .inner .left_side .sub_text .table:nth-of-type(2) .data span {
+  width: 0%;
+}
+section.data_page .inner .left_side .sub_text .table:nth-of-type(3) .data span {
+  width: 0%;
+}
+section.data_page .inner .right_side {
+  width: 560px;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: 1s;
+}
+section.data_page .inner .right_side .pic {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+section.data_page .inner .right_side .pic .left, section.data_page .inner .right_side .pic .right {
+  width: 280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(40, 44, 55, 0.3);
+  box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+section.data_page .inner .right_side .pic .left article, section.data_page .inner .right_side .pic .right article {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section.data_page .inner .right_side .pic .left article i, section.data_page .inner .right_side .pic .right article i {
+  width: 120px;
+  height: 120px;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #6a88d8;
+  margin-bottom: 20px;
+}
+section.data_page .inner .right_side .pic .left article > p, section.data_page .inner .right_side .pic .right article > p {
+  font: bold 24px/1 "arial";
+  text-align: center;
+  opacity: 0;
+  margin-top: 40px;
+  transition: 1s 1s;
+}
+section.data_page .inner .right_side .pic .left article .name, section.data_page .inner .right_side .pic .right article .name {
+  width: 240px;
+  height: 220px;
+  border: 1px solid #6a88d8;
+  border-radius: 20px;
+  background-color: #6a88d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+section.data_page .inner .right_side .pic .left article .name h2, section.data_page .inner .right_side .pic .right article .name h2 {
+  font: bold 26px/1 "arial";
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+section.data_page .inner .right_side .pic .left article .name p, section.data_page .inner .right_side .pic .right article .name p {
+  font: 16px/1 "arial";
+  text-align: center;
+  margin: 20px;
+  color: #fff;
+}
+section.data_page .inner .right_side .pic .left {
+  margin-right: 20px;
+  opacity: 0;
+  margin-top: 120px;
+  transition: 1s;
+}
+section.data_page .inner .right_side .pic .right {
+  margin-top: 180px;
+  opacity: 0;
+  transition: 1s 0.2s;
+}
+section.data_page .inner .right_side .pic .right article i {
+  transform: scale(1.2);
+  margin-bottom: 40px;
+}
+section.data_page.on .inner .left_side .sub_text .table .data span {
+  width: 60%;
+}
+section.data_page.on .inner .left_side .sub_text .table:nth-of-type(2) .data span {
+  width: 80%;
+}
+section.data_page.on .inner .left_side .sub_text .table:nth-of-type(3) .data span {
+  width: 70%;
+}
+section.data_page.on .inner .right_side .pic .left article > p, section.data_page.on .inner .right_side .pic .right article > p {
+  opacity: 1;
+  margin-top: 0px;
+}
+section.data_page.on .inner .right_side .pic .left {
+  opacity: 1;
+  margin-top: 0px;
+}
+section.data_page.on .inner .right_side .pic .right {
+  opacity: 1;
+  margin-top: 60px;
+}
+
+.introduction {
+  width: 100%;
+  height: 100vh;
+  padding: 200px 0;
+}
+.introduction .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+.introduction .inner h1 {
+  font: bold 30px/1 "Montserrat";
+  color: #000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.introduction .inner p {
+  font: 16px/1 "arial";
+  color: #555;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.introduction .inner p a {
+  font-weight: bold;
+  color: cornflowerblue;
+}
+.introduction .inner .wrap {
+  width: 100%;
+}
+.introduction .inner .wrap article {
+  width: 380px;
+  height: 240px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: 1s;
+  transform: scale(0);
+}
+.introduction .inner .wrap article .pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  background-color: #141c3a;
+  overflow: hidden;
+}
+.introduction .inner .wrap article .pic img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: -2;
+  transition: 0.5s;
+}
+.introduction .inner .wrap article:nth-of-type(3) {
+  margin-right: 0;
+}
+.introduction .inner .wrap article:nth-of-type(6) {
+  margin-right: 0;
+}
+.introduction .inner .wrap article h2 {
+  color: #fff;
+  font: bold 20px "Montserrat";
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  z-index: 5;
+  transition: 0.5s;
+}
+.introduction .inner .wrap article span {
+  margin: 0 auto;
+  width: 200px;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 8px;
+  border-radius: 50px;
+  font: bold 16px "Montserrat";
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  opacity: 0;
+  z-index: 5;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.introduction .inner .wrap article span i {
+  position: absolute;
+  font-size: 14px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.introduction .inner .wrap article:hover {
+  background-color: #282c37;
+}
+.introduction .inner .wrap article:hover .pic img {
+  opacity: 0;
+  transform: scale(1.2);
+}
+.introduction .inner .wrap article:hover h2, .introduction .inner .wrap article:hover span {
+  opacity: 1;
+}
+.introduction.on .inner .wrap article {
+  transform: scale(1);
+}
+
+footer {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #282c37;
+  color: #fff;
+}
+footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+footer .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+footer .inner h1 {
+  font: bold 30px/1 "Montserrat";
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+footer .inner ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+footer .inner ul li {
+  margin-right: 20px;
+  text-align: center;
+}
+footer .inner ul li a {
+  font: 14px/1 "Montserrat";
+  color: #ddd;
+}
+footer .inner ul span {
+  margin-right: 20px;
+  color: #ddd;
+}
+footer .inner p {
+  font: 14px/1 "Montserrat";
+  text-align: center;
+}
+
+#footer_sub {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #282c37;
+  color: #fff;
+}
+#footer_sub .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#footer_sub .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#footer_sub .inner h1 {
+  font: bold 30px/1 "Montserrat";
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+#footer_sub .inner ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#footer_sub .inner ul li {
+  margin-right: 20px;
+  text-align: center;
+}
+#footer_sub .inner ul li a {
+  font: 14px/1 "Montserrat";
+  color: #ddd;
+}
+#footer_sub .inner ul span {
+  margin-right: 20px;
+  color: #ddd;
+}
+#footer_sub .inner p {
+  font: 14px/1 "Montserrat";
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+  padding: 0 0 150px;
+}
+.content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+.content .inner h1 {
+  font: normal 50px/1 "arial";
+  color: #000;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  transition: 0.5s;
+}
+.content .inner h1 span {
+  font: normal 20px/1 "맑은 고딕";
+  color: #aaa;
+}
+.content .inner h1 span::before {
+  content: "/";
+  margin: 0 20px 0 10px;
+}
+
+.first {
+  width: 100%;
+  position: relative;
+}
+.first nav {
+  width: 150px;
+  height: 120px;
+  position: fixed;
+  left: 23vw;
+  top: 22vh;
+  border-radius: 15px;
+}
+.first nav ul {
+  width: 100%;
+  height: 100%;
+}
+.first nav ul li {
+  width: 100%;
+  height: 40px;
+  font: 16px/40px "Montserrat";
+  color: #999;
+  transition: 1s;
+}
+.first nav ul li.on {
+  font-weight: bold;
+  color: #000;
+  font-size: 20px;
+}
+.first > .inner {
+  width: 680px;
+}
+.first > .inner h1 {
+  margin-top: 90px;
+  transition: 1s;
+  opacity: 0;
+}
+.first > .inner article {
+  width: 100%;
+  height: 450px;
+  border: 1px solid #282c37;
+  box-shadow: 0px 0 16px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  transition: 1s;
+  background-color: #fff;
+  margin-left: -150px;
+  opacity: 0;
+}
+.first > .inner article .pic {
+  width: 640px;
+  height: 270px;
+  margin: 20px 20px 0px 20px;
+}
+.first > .inner article .text {
+  width: 640px;
+  height: 130px;
+  margin: 20px;
+}
+.first > .inner article .text h2 {
+  font: bold 30px/1 "Montserrat";
+  margin-bottom: 10px;
+}
+.first > .inner article .text p {
+  font: 16px/1 "arial";
+}
+.first > .inner article:nth-of-type(1) {
+  transition: 1s 0s;
+}
+.first > .inner article:nth-of-type(1) .pic {
+  background: url(../img/sub/logo_microsoft365.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.first > .inner article:nth-of-type(2) {
+  transition: 1s 0.2s;
+}
+.first > .inner article:nth-of-type(2) .pic {
+  background: url(../img/sub/images.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+.first > .inner article:nth-of-type(3) {
+  transition: 1s 0.4s;
+}
+.first > .inner article:hover {
+  transform: scale(1.05);
+}
+.first > .inner article.on_1 {
+  margin-left: 0;
+  opacity: 1;
+}
+.first aside {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  opacity: 1;
+  padding: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 1s;
+  background-color: #333;
+}
+.first aside .txt {
+  width: 25%;
+  height: 100%;
+}
+.first aside .txt h1 {
+  font: normal 6vw/1 "Alegreya Sans SC";
+  color: #ddd;
+  margin-bottom: 20px;
+}
+.first aside .txt p {
+  font: 1.1vw/1.3 "arial";
+  color: #666;
+  margin-bottom: 50px;
+}
+.first aside .txt span {
+  cursor: pointer;
+  color: orange;
+}
+.first aside figure {
+  width: 72%;
+  height: 100%;
+}
+.first aside figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.first.atvie .inner h1 {
+  margin-top: 60px;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

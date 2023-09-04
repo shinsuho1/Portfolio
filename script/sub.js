@@ -8,6 +8,8 @@ let posArr = [];
 setInterval(() => {
     main.classList.add("atvie");
     article[0].classList.add("on_1");
+    article[1].classList.add("on_1");
+
 }, 300);
 
 

@@ -19,7 +19,7 @@ window.addEventListener("scroll",()=>{
     let scroll = window.scrollY;
     console.log(scroll);
     section_arr.map((el,index)=>{
-        if(scroll >= posArr[index]-200){
+        if(scroll >= posArr[index]-400){
             section_arr[index].classList.add("active");
         }
         if(scroll >= 1270){

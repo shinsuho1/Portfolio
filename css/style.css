@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -878,7 +879,7 @@ footer .inner p {
   min-height: 500px;
 }
 .content .inner h1 {
-  font: normal 50px/1 "arial";
+  font: bold 50px/1 "arial";
   color: #000;
   margin-bottom: 20px;
   margin-top: 80px;
@@ -949,6 +950,11 @@ footer .inner p {
   height: 270px;
   margin: 20px 20px 0px 20px;
 }
+.information > .inner article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .information > .inner article .text {
   width: 640px;
   height: 130px;
@@ -964,21 +970,8 @@ footer .inner p {
 .information > .inner article:nth-of-type(1) {
   transition: 1s 0s;
 }
-.information > .inner article:nth-of-type(1) .pic {
-  background: url(../img/sub/logo_microsoft365.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 .information > .inner article:nth-of-type(2) {
   transition: 1s 0.2s;
-}
-.information > .inner article:nth-of-type(2) .pic {
-  background: url(../img/sub/images.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
 }
 .information > .inner article:nth-of-type(3) {
   justify-content: center;
@@ -1013,7 +1006,7 @@ footer .inner p {
   color: #fff;
   margin: 5px;
 }
-.information > .inner article.on_1 {
+.information > .inner article.first {
   margin-left: 0;
   opacity: 1;
 }
@@ -1028,38 +1021,53 @@ footer .inner p {
   opacity: 1;
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transition: 1s;
   background-color: #333;
 }
 .information aside figure {
-  width: 72%;
+  display: flex;
+  width: 60%;
   height: 100%;
+  align-items: center;
+  margin-left: 20px;
 }
-.information aside figure video {
+.information aside figure img {
   width: 100%;
-  height: 100%;
+  height: 70%;
   object-fit: cover;
 }
 .information aside .txt {
-  width: 25%;
+  position: relative;
+  width: 40%;
   height: 100%;
 }
 .information aside .txt h1 {
-  font: normal 6vw/1 "Alegreya Sans SC";
+  font: normal 4vw/1 "Rubik";
   color: #ddd;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 .information aside .txt p {
   font: 1.1vw/1.3 "arial";
   color: #666;
   margin-bottom: 50px;
+  margin-left: 30px;
 }
 .information aside .txt span {
+  font-size: 24px;
+  position: absolute;
   cursor: pointer;
   color: orange;
+  bottom: 5vw;
+  right: 50px;
+}
+.information aside.on {
+  left: 50%;
+}
+.information aside.address figure {
+  width: 50%;
+  height: 100%;
 }
 .information.atvie .inner h1 {
   margin-top: 60px;
@@ -1136,6 +1144,204 @@ footer .inner p {
 }
 .news.atvie .inner h1 {
   margin-top: 60px;
+  opacity: 1;
+}
+
+.download {
+  width: 100%;
+  height: 100vh;
+  padding: 0 0 150px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.download .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../../img/sub/download\ backgorund\ .png);
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: -50%;
+  opacity: 0;
+  transition: 1s 0.5s;
+  z-index: -4;
+  overflow: hidden;
+}
+.download .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: 1s;
+}
+.download .inner h1 {
+  font: bold 90px/1 "Rubik";
+}
+.download .inner h1 span.col1 {
+  text-shadow: 0px 2px 10px #000;
+  color: #fff;
+}
+.download .inner h1 span.col2 {
+  color: #ffae11;
+}
+.download .inner p.ex {
+  margin: 30px 0 40px;
+  font: 22px/1 "Rubik";
+}
+.download .inner a.btn {
+  height: 60px;
+  padding: 0 50px;
+  background-color: #6a88d8;
+  font: 22px/60px "Rubik";
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.download .inner p {
+  margin-top: 30px;
+  font: 17px/1 "arial";
+}
+.download .inner p span a {
+  margin-left: 8px;
+  color: #6a88d8;
+  font-weight: bold;
+  cursor: pointer;
+}
+.download.active .img {
+  bottom: -5%;
+  opacity: 0.7;
+}
+.download.active .inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.version {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #282c37;
+  color: #fff;
+}
+.version h2 {
+  text-align: center;
+  font: bold 55px/1 "Rubik";
+  opacity: 0;
+  transform: translateY(50%);
+  transition: 0.5s;
+}
+.version ul {
+  width: 1180px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  transform: translateY(30%);
+  opacity: 0;
+  transition: 0.5s 0.5s;
+}
+.version ul li {
+  width: 160px;
+  height: 100%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.version ul li i {
+  width: 90px;
+  height: 90px;
+  font-size: 90px;
+  margin-bottom: 10px;
+  transition: 1s 0.5;
+}
+.version ul li h3 {
+  font: 20px/1 "Rubik";
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.version ul li:nth-of-type(1) i {
+  color: #00adef;
+}
+.version ul li:nth-of-type(3) {
+  margin-right: 0;
+}
+.version ul li:nth-of-type(3) i {
+  color: #32de84;
+}
+.version p {
+  font: 18px/1 "arial";
+  color: #7d7d7e;
+  transform: translateY(-30%);
+  opacity: 0;
+  transition: 0.5s 1s;
+}
+.version.active h2 {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.version.active ul {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.version.active p {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.type {
+  width: 100%;
+  height: 30vh;
+  padding: 0 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.type h2 {
+  font: 24px/1 "Rubik";
+  text-align: center;
+  transform: translateY(65%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.type .btn {
+  width: 1180px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.type .btn a {
+  width: 240px;
+  height: 38px;
+  padding: 10px;
+  background-color: #0078d4;
+  font: bold 16px "arial";
+  color: #fff;
+  text-align: center;
+  transform: translateY(65%);
+  opacity: 0;
+  transition: 0.7s 0.5s;
+}
+.type.active h2 {
+  transform: translateY(0);
+  opacity: 1;
+}
+.type.active .btn a {
+  transform: translateY(0%);
   opacity: 1;
 }
 

@@ -3,13 +3,15 @@ const article_arr = Array.from(article);
 const lis = document.querySelectorAll(".information>nav>ul>li");
 const main = document.querySelector(".content");
 const aside = document.querySelector("aside");
-console.log(lis);
+const close = aside.querySelector("span");
+const address = document.querySelector(".address");
+// console.log(lis);
 let posArr = [];
 
 setInterval(() => {
     main.classList.add("atvie");
-    article[0].classList.add("on_1");
-    article[1].classList.add("on_1");
+    article[0].classList.add("first");
+    article[1].classList.add("first");
 
 }, 300);
 
@@ -32,13 +34,34 @@ window.addEventListener("scroll",()=>{
             }
             lis[index].classList.add("on");
             // console.log(scroll);
-            article_arr[index].classList.add("on_1");
+            article_arr[index].classList.add("first");
+        }
+        if(scroll >= 600){
+            article_arr[2].classList.add("first");
         }
     });
 });
 
 for(let el of article){
-    el.addEventListener("click",()=>{
+    el.addEventListener("click",(e)=>{
+        let tit = e.currentTarget.querySelector("h2").innerText;
+        let txt = e.currentTarget.querySelector("p").innerText;
+        let img = e.currentTarget.querySelector("img").getAttribute("src");
+        console.log(img);
+        aside.querySelector("h1").innerText = tit;
+        aside.querySelector("p").innerText = txt;
+        aside.querySelector("img").setAttribute("src", img);
+        // aside.querySelector("img")
         aside.classList.add("on");
     });
 }
+
+close.addEventListener("click", () => {
+    aside.classList.remove("on");
+})
+
+address.addEventListener("click",()=>{
+    
+});
+
+

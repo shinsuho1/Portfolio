@@ -1,7 +1,8 @@
 const article = document.querySelectorAll("article");
 const article_arr = Array.from(article);
-const lis = document.querySelectorAll(".first>nav>ul>li");
+const lis = document.querySelectorAll(".information>nav>ul>li");
 const main = document.querySelector(".content");
+const aside = document.querySelector("aside");
 console.log(lis);
 let posArr = [];
 
@@ -36,3 +37,8 @@ window.addEventListener("scroll",()=>{
     });
 });
 
+for(let el of article){
+    el.addEventListener("click",()=>{
+        aside.classList.add("on");
+    });
+}

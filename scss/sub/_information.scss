@@ -181,10 +181,10 @@
                 // 접근성에 관련된 내용이다
                 color: orange;
             }
-
         }
-
-        
+        &.on{
+            left: 50%;
+        }
     }
     &.atvie{
         .inner{
